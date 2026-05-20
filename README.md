@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🪼 Immortal Jellyfish Algorithm (IJA)
+# Immortal Jellyfish Algorithm (IJA)
 
 **A novel bio-inspired swarm intelligence optimizer**  
 *Modelling the immortal jellyfish lifecycle × lighthouse light propagation*
@@ -9,13 +9,13 @@
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=cplusplus&logoColor=white)](https://en.cppreference.com/w/cpp/17)
 [![Java 8+](https://img.shields.io/badge/Java-8%2B-ED8B00?logo=openjdk&logoColor=white)](https://www.java.com/)
-[![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/immortal-jellyfish-algorithm?style=social)](https://github.com/YOUR_USERNAME/immortal-jellyfish-algorithm)
+[![Stars](https://img.shields.io/github/stars/LangZhong36/immortal-jellyfish-algorithm?style=social)](https://github.com/LangZhong36/immortal-jellyfish-algorithm)
 
 </div>
 
 ---
 
-## 🌊 What is IJA?
+## What is IJA?
 
 The **Immortal Jellyfish Algorithm (IJA)** is a metaheuristic optimizer
 inspired by two elegant natural phenomena:
@@ -26,17 +26,17 @@ inspired by two elegant natural phenomena:
 2. **Lighthouse light propagation** — the inverse-square law governing
    how light intensity falls off with distance from a point source.
 
-Available in **Python** (primary), **C++** (competitive-style), and **Java**.
+Available in **Python**, **C++**, and **Java**.
 
 ---
 
-## 🔬 Four-Phase Lifecycle
+## Four-Phase Lifecycle
 
 ```
  ──────────────────────────────────────────────────────────────▶  τ = t / T_max
   [0, 0.15)               [0.15, 0.50)        [0.50, 0.85)        [0.85, 1]
  ┌──────────────┐       ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
- │   POLYP      │──▶    │ STROBILATION │──▶ │    MEDUSA    │──▶ │  SENESCENCE  │
+ │   POLYP      │   ─>  │ STROBILATION │ ─> │    MEDUSA    │ ─> │  SENESCENCE  │
  │              │       │              │    │              │    │              │
  │ Lévy-flight  │       │ Adaptive     │    │ Lighthouse   │    │ Gaussian     │
  │ exploration  │       │ ephyra buds  │    │ attraction   │    │ refinement   │
@@ -66,7 +66,7 @@ Full derivations: [`docs/algorithm_details.md`](docs/algorithm_details.md)
 
 ---
 
-## 📊 Benchmark Results
+## Benchmark Results
 
 ![Convergence Curves](results/convergence_curves.png)
 
@@ -87,7 +87,7 @@ Full derivations: [`docs/algorithm_details.md`](docs/algorithm_details.md)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Python (Primary Implementation)
 
@@ -138,7 +138,7 @@ java -cp out ija.Main
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 immortal-jellyfish-algorithm/
@@ -192,7 +192,7 @@ immortal-jellyfish-algorithm/
 
 ---
 
-## ⚙️ IJA Parameters
+## IJA Parameters
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
@@ -207,7 +207,7 @@ immortal-jellyfish-algorithm/
 
 ---
 
-## 🆕 Algorithmic Improvements (IJA vs original LJA)
+## Algorithmic Improvements (IJA vs original LJA)
 
 - **Adaptive ephyra count** — starts at 5, decreases to 2 through strobilation phase; larger early diversity, lower late cost.
 - **Crowding-distance archive** — prunes archive by (fitness, crowding-distance) to retain diverse elites.
@@ -216,21 +216,21 @@ immortal-jellyfish-algorithm/
 
 ---
 
-## 📖 Citation
+## Citation
 
 ```bibtex
 @software{ija2025,
   title   = {Immortal Jellyfish Algorithm (IJA)},
   author  = {IJA Contributors},
   year    = {2025},
-  url     = {https://github.com/YOUR_USERNAME/immortal-jellyfish-algorithm},
+  url     = {https://github.com/LangZhong36/immortal-jellyfish-algorithm},
   license = {MIT}
 }
 ```
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork → feature branch (`git checkout -b feature/my-improvement`)
 2. Commit (`git commit -m 'Add ...'`)
