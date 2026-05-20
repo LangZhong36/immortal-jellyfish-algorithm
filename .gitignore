@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# C++ build
+cpp/build/
+cpp/cmake-build-*/
+*.o
+*.a
+*.so
+*.exe
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Java build
+java/target/
+*.class
+*.jar
+
+# Results (keep only .gitkeep)
+results/*.json
+results/*.png
+results/*.csv
+!results/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+*.swp
+*.swo

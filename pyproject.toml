@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name            = "immortal-jellyfish-algorithm"
+version         = "1.0.0"
+description     = "Immortal Jellyfish Algorithm (IJA) — a nature-inspired metaheuristic optimizer"
+readme          = "README.md"
+license         = {file = "LICENSE"}
+authors         = [{name = "IJA Contributors"}]
+requires-python = ">=3.8"
+keywords        = ["metaheuristic", "swarm-intelligence", "optimization", "evolutionary-algorithm"]
+classifiers     = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "numpy>=1.21",
+]
+
+[project.optional-dependencies]
+experiments = ["scipy>=1.7", "tqdm>=4.60"]
+visualize   = ["matplotlib>=3.4"]
+all         = ["scipy>=1.7", "tqdm>=4.60", "matplotlib>=3.4"]
+
+[project.urls]
+Homepage   = "https://github.com/YOUR_USERNAME/immortal-jellyfish-algorithm"
+Repository = "https://github.com/YOUR_USERNAME/immortal-jellyfish-algorithm"
+
+[tool.setuptools.packages.find]
+where = ["python"]
