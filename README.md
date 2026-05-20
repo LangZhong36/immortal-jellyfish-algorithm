@@ -11,6 +11,8 @@
 [![Java 8+](https://img.shields.io/badge/Java-8%2B-ED8B00?logo=openjdk&logoColor=white)](https://www.java.com/)
 [![Stars](https://img.shields.io/github/stars/LangZhong36/immortal-jellyfish-algorithm?style=social)](https://github.com/LangZhong36/immortal-jellyfish-algorithm)
 
+**[Chinese README](README_zh.md)**
+
 </div>
 
 ---
