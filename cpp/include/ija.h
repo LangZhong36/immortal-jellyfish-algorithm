@@ -1,58 +1,53 @@
 #pragma once
-#include <bits/stdc++.h>
-using namespace std;
-#define ll long long int
-#define pb push_back
-#define fi first
-#define se second
 
-/*
- * Immortal Jellyfish Algorithm (IJA) — C++ Header
- * Competitive-programming style: short names, global arrays, no lambda.
- */
+#include <iostream>
+#include <vector>
 
-static const int MAXN  = 505;
-static const int MAXD  = 305;
+static const int MAXN = 505;
+static const int MAXD = 305;
 static const int MAXAR = 55;
 
 struct Jly {
     double pos[MAXD];
     double fit;
-    int    age;
+    int age;
 };
 
 struct FIdx {
     double val;
-    int    idx;
-    bool operator<(const FIdx& o) const { return val < o.val; }
+    int idx;
+    bool operator<(const FIdx& o) const {
+        return val < o.val;
+    }
 };
 
 struct Cfg {
-    int    n, d, mxit;
+    int n, d, mxit;
     double lb, ub;
-    int    topk, archsz, agemax, neph;
+    int topk, archsz, agemax, neph;
     double levy, lmbd, amax, amin, dthr;
     Cfg() : n(50), d(30), mxit(500),
-            lb(-100), ub(100),
-            topk(3), archsz(15), agemax(25), neph(3),
-            levy(1.5), lmbd(0.5), amax(2.0), amin(0.05), dthr(0.005) {}
+        lb(-100), ub(100),
+        topk(3), archsz(15), agemax(25), neph(3),
+        levy(1.5), lmbd(0.5), amax(2.0), amin(0.05), dthr(0.005) {
+    }
 };
 
 struct Res {
-    double  bestfit;
-    double  bestpos[MAXD];
-    double  curve[5005];
-    int     niter;
-    ll      nfev;
+    double bestfit;
+    double bestpos[MAXD];
+    double curve[5005];
+    int niter;
+    long long int nfev;
 };
 
-extern Jly   pop[MAXN];
+extern Jly pop[MAXN];
 extern double arch[MAXAR][MAXD];
 extern double archfit[MAXAR];
-extern int    narchr;
+extern int narchr;
 extern double ltpos[10][MAXD];
 extern double phi[MAXN];
-extern Res    gres;
+extern Res gres;
 
 typedef double (*ObjFn)(const double*, int);
 

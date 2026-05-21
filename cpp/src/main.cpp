@@ -1,27 +1,34 @@
 #include "ija.h"
-#include <bits/stdc++.h>
-using namespace std;
-#define ll long long int
+#include <iostream>
+#include <iomanip>
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
 
     int T;
-    cin >> T;
+    std::cin >> T;
     while (T--) {
         Cfg c;
         int fid;
-        cin >> fid >> c.d >> c.mxit >> c.lb >> c.ub;
+        std::cin >> fid >> c.d >> c.mxit >> c.lb >> c.ub;
 
-        auto fn = [fid](const double* x, int d) { return bench(fid, x, d); };
+        auto fn = [fid](const double* x, int d) {
+            return bench(fid, x, d);
+            };
+
         Res r;
         optm(c, fn, r);
 
-        cout << fixed << setprecision(10) << r.bestfit << "\n";
-        for (int j = 0; j < c.d; j++)
-            cout << r.bestpos[j] << " \n"[j == c.d-1];
-        cout << "NFev: " << r.nfev << "\n";
+        std::cout << std::fixed << std::setprecision(10) << r.bestfit << "\n";
+        std::cout << r.bestpos[0];
+        for (int j = 1; j < c.d; j++) {
+            std::cout << " " << r.bestpos[j];
+        }
+        std::cout << "\n";
+
+        std::cout << "NFev: " << r.nfev << "\n";
     }
+
     return 0;
 }
