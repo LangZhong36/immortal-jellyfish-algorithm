@@ -152,24 +152,3 @@ distance (larger distance = more diverse = preferred to retain).
 $$\mathcal{O}(T_{\max} \cdot n \cdot d)$$
 
 Identical to PSO, GWO, and WOA — IJA is a drop-in replacement.
-
----
-
-## 7. Algorithmic Improvements Over Original LJA
-
-The following enhancements distinguish IJA from its predecessor:
-
-1. **Adaptive $n_\text{eph}$** — the number of ephyra offspring decreases
-   from 5 to 2 across the strobilation phase, allocating evaluation budget
-   toward refinement as the phase ends.
-
-2. **Crowding-distance archive** — the elite archive maintains diversity
-   by favouring solutions with larger objective-space gaps when pruning,
-   preventing premature convergence of the archive.
-
-3. **Senescence Gaussian refinement** — a dedicated tight local search
-   operator replaces simple attraction in the final phase, improving final
-   solution precision.
-
-4. **Proper package structure** — all three language implementations are
-   modular, independently runnable, and cover the full operator set.
