@@ -303,7 +303,8 @@ class IJA:
         self, population: np.ndarray, fitnesses: np.ndarray
     ) -> np.ndarray:
         k = min(self.top_k, self.n)
-        elite_idx = np.argpartition(fitnesses, k)[:k]
+        elite_idx = np.argpartition(fitnesses, k - 1)[:k]
+        elite_idx = elite_idx[np.argsort(fitnesses[elite_idx])]
         return population[elite_idx]
 
     def _pick_lighthouse(
